@@ -19,15 +19,14 @@ let wrongLetters = [];
 
 // here we show hidden words
 function wordShow (){
-    wordElement.innerHTML = `
-    ${selectedWord
+    wordElement.innerHTML = `${selectedWord
         .split('')
-        .map(letter => `
-        <span class="letter">
-            ${correctLetters.includes(letter) ? letter : ""}
+        .map(
+            letter => `
+            <span class="letter">
+             ${correctLetters.includes(letter) ? letter : ""}
         </span>
-        `)
-        .join('')}`;
+        `).join('')}`;
 
 // make the letter to one line
         let innerWord = wordElement.innerText.replace(/\n/g,'')
