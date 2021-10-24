@@ -7,7 +7,7 @@ const finalMessage = document.getElementById('final-message');
 
 const bodyParts = document.querySelectorAll('.bodyParts');
 
-let words = ['application', 'programming', 'amit', 'javascript', 'meshi' ];
+let words = ['application', 'programming', 'amit', 'javascript', 'meshi'];
 
 // select a random word
 let selectedWord = words[Math.floor(Math.random() * words.length)];
@@ -29,7 +29,7 @@ function wordShow (){
         `).join('')}`;
 
 // make the letter to one line
-        let innerWord = wordElement.innerText.replace(/\n/g,'')
+        let innerWord = wordElement.innerText.replace(/\n/g,'');
         // console.log(wordElement.innerHTML);
         
 
@@ -38,9 +38,6 @@ function wordShow (){
             popup.style.display = 'flex'
         }
 }
-
-wordShow();
-
 
 function updateWrongLettersEl(){
     // display wrong letters
@@ -57,6 +54,7 @@ function updateWrongLettersEl(){
         }
     });
 
+  // Check if lost
     if(wrongLetters.length === bodyParts.length){
         finalMessage.innerText = 'You lost!!';
         popup.style.display = 'flex'
@@ -86,10 +84,10 @@ if(selectedWord.includes(letter)){
     if(!correctLetters.includes(letter)) {
         correctLetters.push(letter);
 
-        wordShow()
+        wordShow();
     } else {
         showNotification();
-    }
+     }
     } else  {
         if(!wrongLetters.includes(letter)){
             wrongLetters.push(letter);
@@ -118,7 +116,7 @@ if(selectedWord.includes(letter)){
 
 
 
-
+wordShow()
 
 
 
