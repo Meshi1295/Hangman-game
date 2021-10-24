@@ -63,7 +63,6 @@ function updateWrongLettersEl(){
 }
 
 
-
 function showNotification(){
     notification.classList.add('show');
 
